@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earthinfo System — Building the Future with Technology</title>
+  <meta name="description" content="Earthinfo System is an innovative software company building next-generation technology solutions in AI, cloud, and web." />
+  <meta name="theme-color" content="#050507" />
+  <meta name="keywords" content="Earthinfo System, software company, web development, AI solutions">
+  <meta name="author" content="Hardik Kumawat">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- AMBIENT ORBS -->
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+  </div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-grid" aria-hidden="true"></div>
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="ll-e">E</span><span class="ll-s">S</span>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+        <span class="loader-pct" id="loaderPct">0%</span>
+      </div>
+      <p class="loader-status" id="loaderText">Initializing systems…</p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-progress" id="navProgress"></div>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-mark">ES</span>
+        Earthinfo<span class="logo-accent">System</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#founder">Founder</a></li>
+        <li><a href="#tech">Tech</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="#contact" class="btn-nav">
+          <span>Get Started</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <ul>
+        <li><a href="#about"    class="mob-link">About</a></li>
+        <li><a href="#services" class="mob-link">Services</a></li>
+        <li><a href="#projects" class="mob-link">Projects</a></li>
+        <li><a href="#founder"  class="mob-link">Founder</a></li>
+        <li><a href="#tech"     class="mob-link">Tech</a></li>
+        <li><a href="#contact"  class="mob-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="mob-cta btn-primary">Start a Project →</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ══ -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
+    <!-- Floating UI fragments -->
+    <div class="float-card float-card-1" aria-hidden="true">
+      <div class="fc-dots">
+        <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+        <span class="fc-filename">ai_pipeline.py</span>
+      </div>
+      <div class="fc-code">
+        <div class="fc-line"><span class="kw">def</span> <span class="fn">infer</span>(data):</div>
+        <div class="fc-line indent"><span class="kw">return</span> model.run(data)</div>
+        <div class="fc-line comment">  # accuracy: 95.4%</div>
+      </div>
+    </div>
+
+    <div class="float-card float-card-2" aria-hidden="true">
+      <span class="fc-big">95.9<small>%</small></span>
+      <span class="fc-sub">Uptime SLA</span>
+      <div class="fc-bars">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <div class="float-card float-card-3" aria-hidden="true">
+      <div class="fc-pill"><i class="fa-brands fa-react"></i> React</div>
+      <div class="fc-pill"><i class="fa-brands fa-python"></i> Python</div>
+      <div class="fc-pill"><i class="fa-brands fa-aws"></i> AWS</div>
+    </div>
+
+    <div class="hero-content" id="heroContent">
+      <div class="hero-eyebrow">
+        <span class="pulse-ring"></span>
+        <span class="pulse-dot"></span>
+        <span>Now Accepting New Clients — 2026</span>
+      </div>
+
+      <h1 class="hero-title" id="heroTitle">
+        <span class="ht-line">Building the</span>
+        <span class="ht-line ht-gold">Future with</span>
+        <span class="ht-line">Technology</span>
+      </h1>
+
+      <p class="hero-sub" id="heroSub">
+        Earthinfo System crafts next-generation digital products —<br />
+        from AI systems to scalable cloud infrastructure —<br />
+        that power the businesses of tomorrow.
+      </p>
+
+      <div class="hero-cta" id="heroCta">
+        <a href="#services" class="btn-primary btn-glow">
+          <span class="btn-shimmer"></span>
+          <i class="fa-solid fa-bolt"></i>
+          View Services
+        </a>
+        <a href="#contact" class="btn-ghost">
+          <span>Contact Us</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="hero-stats" id="heroStats">
+        <div class="stat">
+          <div class="stat-val">
+            <span class="stat-num" data-val="80">0</span><span class="stat-sym">+</span>
+          </div>
+          <p>Projects Delivered</p>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <div class="stat-val">
+            <span class="stat-num" data-val="50">0</span><span class="stat-sym">+</span>
+          </div>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <div class="stat-val">
+            <span class="stat-num" data-val="6">0</span><span class="stat-sym">+</span>
+          </div>
+          <p>Years Experience</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" id="heroScroll">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll to explore</span>
+    </div>
+
+    <div class="hero-fade" aria-hidden="true"></div>
+  </section>
+
+  <!-- ═══════════════════════════════ ABOUT ══ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-tag reveal">
+        <span class="tag-icon"><i class="fa-solid fa-circle-info"></i></span>
+        Who We Are
+      </div>
+
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <h2 class="section-title">
+            We engineer <em>ideas</em> into<br/>impactful digital reality
+          </h2>
+          <p class="body-text">
+            Founded with a singular mission — to bridge the gap between ambitious ideas and technological excellence — Earthinfo System has grown into a full-spectrum software powerhouse trusted by startups and enterprises alike.
+          </p>
+          <p class="body-text">
+            We believe the best technology is invisible: it just works. Our multidisciplinary team of engineers, designers, and strategists builds products that are powerful <em>and</em> genuinely delightful.
+          </p>
+          <a href="#services" class="btn-text">
+            Explore our services
+            <span class="bta"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <div class="about-right">
+          <div class="about-card reveal" style="--delay:0s">
+            <div class="ac-glow"></div>
+            <div class="about-card-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <div class="ac-body">
+              <h3>Mission</h3>
+              <p>Empower businesses with technology that's scalable, secure, and strategically built for long-term growth.</p>
+            </div>
+            <div class="ac-num">01</div>
+          </div>
+          <div class="about-card reveal" style="--delay:0.12s">
+            <div class="ac-glow"></div>
+            <div class="about-card-icon"><i class="fa-solid fa-eye"></i></div>
+            <div class="ac-body">
+              <h3>Vision</h3>
+              <p>A world where every business accesses enterprise-grade software built for the future, at any scale.</p>
+            </div>
+            <div class="ac-num">02</div>
+          </div>
+          <div class="about-card reveal" style="--delay:0.24s">
+            <div class="ac-glow"></div>
+            <div class="about-card-icon"><i class="fa-solid fa-gem"></i></div>
+            <div class="ac-body">
+              <h3>Values</h3>
+              <p>Precision craftsmanship, radical transparency, and relentless pursuit of excellence in every release.</p>
+            </div>
+            <div class="ac-num">03</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SERVICES ══ -->
+  <section class="services section" id="services">
+    <div class="section-grid-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-tag reveal">
+        <span class="tag-icon"><i class="fa-solid fa-layer-group"></i></span>
+        What We Do
+      </div>
+      <h2 class="section-title centered reveal">Our Core Services</h2>
+      <p class="section-sub reveal">End-to-end technology solutions — from concept and design through deployment and infinite scale.</p>
+
+      <div class="services-grid services-grid--6">
+
+        <!-- 01 Web Development -->
+        <div class="service-card gsap-service-card" style="--sc-color:195">
+          <div class="sc-top-bar"></div>
+          <div class="sc-glow"></div>
+          <div class="sc-particles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="sc-num">01</div>
+          <div class="sc-icon-wrap">
+            <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="sc-icon-ring"></div>
+          </div>
+          <h3>Web Development</h3>
+          <p>High-performance web apps and marketing sites — blazing fast, pixel-perfect, built to convert.</p>
+          <ul class="service-tags">
+            <li>React</li><li>Next.js</li><li>Node.js</li>
+          </ul>
+          <a href="#contact" class="sc-link">
+            <span>Learn more</span>
+            <span class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <!-- 02 Custom Software -->
+        <div class="service-card gsap-service-card" style="--sc-color:270">
+          <div class="sc-top-bar"></div>
+          <div class="sc-glow"></div>
+          <div class="sc-particles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="sc-num">02</div>
+          <div class="sc-icon-wrap">
+            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="sc-icon-ring"></div>
+          </div>
+          <h3>Custom Software Development</h3>
+          <p>Bespoke enterprise software, APIs, and backend systems engineered for reliability, performance, and long-term maintainability.</p>
+          <ul class="service-tags">
+            <li>Python</li><li>Go</li><li>Microservices</li>
+          </ul>
+          <a href="#contact" class="sc-link">
+            <span>Learn more</span>
+            <span class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <!-- 03 AI Solutions (featured) -->
+        <div class="service-card service-card--featured gsap-service-card" style="--sc-color:45">
+          <div class="sc-top-bar"></div>
+          <div class="sc-glow"></div>
+          <div class="sc-particles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="sc-featured-badge"><i class="fa-solid fa-star"></i> Most Popular</div>
+          <div class="sc-num">03</div>
+          <div class="sc-icon-wrap">
+            <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="sc-icon-ring"></div>
+          </div>
+          <h3>AI Solutions</h3>
+          <p>Intelligent automation, ML pipelines, NLP systems, and LLM-powered products precisely tailored to your business needs.</p>
+          <ul class="service-tags">
+            <li>LLMs</li><li>MLOps</li><li>Automation</li>
+          </ul>
+          <a href="#contact" class="sc-link">
+            <span>Learn more</span>
+            <span class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <!-- 04 Android Apps -->
+        <div class="service-card gsap-service-card" style="--sc-color:130">
+          <div class="sc-top-bar"></div>
+          <div class="sc-glow"></div>
+          <div class="sc-particles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="sc-num">04</div>
+          <div class="sc-icon-wrap">
+            <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+            <div class="sc-icon-ring"></div>
+          </div>
+          <h3>Android App Development</h3>
+          <p>Native and cross-platform Android apps with stunning UX, seamless APIs, and robust offline capabilities built-in.</p>
+          <ul class="service-tags">
+            <li>Kotlin</li><li>Flutter</li><li>Jetpack</li>
+          </ul>
+          <a href="#contact" class="sc-link">
+            <span>Learn more</span>
+            <span class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <!-- 05 Cloud & DevOps -->
+        <div class="service-card gsap-service-card" style="--sc-color:200">
+          <div class="sc-top-bar"></div>
+          <div class="sc-glow"></div>
+          <div class="sc-particles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="sc-num">05</div>
+          <div class="sc-icon-wrap">
+            <div class="service-icon"><i class="fa-solid fa-cloud"></i></div>
+            <div class="sc-icon-ring"></div>
+          </div>
+          <h3>Cloud &amp; DevOps Solutions</h3>
+          <p>Cloud architecture, CI/CD pipelines, and infrastructure-as-code that scales effortlessly from early MVP to global enterprise.</p>
+          <ul class="service-tags">
+            <li>AWS</li><li>GCP</li><li>Terraform</li>
+          </ul>
+          <a href="#contact" class="sc-link">
+            <span>Learn more</span>
+            <span class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <!-- 06 Automation Systems (NEW) -->
+        <div class="service-card gsap-service-card" style="--sc-color:320">
+          <div class="sc-top-bar"></div>
+          <div class="sc-glow"></div>
+          <div class="sc-particles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="sc-num">06</div>
+          <div class="sc-icon-wrap">
+            <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="sc-icon-ring"></div>
+          </div>
+          <h3>Automation Systems</h3>
+          <p>End-to-end workflow automation, RPA bots, and smart integrations that eliminate repetitive tasks and free your team to focus on what matters.</p>
+          <ul class="service-tags">
+            <li>n8n</li><li>Zapier</li><li>RPA</li>
+          </ul>
+          <a href="#contact" class="sc-link">
+            <span>Learn more</span>
+            <span class="sc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ PROCESS ══ -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-tag reveal">
+        <span class="tag-icon"><i class="fa-solid fa-route"></i></span>
+        How We Work
+      </div>
+      <h2 class="section-title centered reveal">Our Process</h2>
+      <p class="section-sub reveal">A battle-tested methodology that turns vague ideas into shipped products — on time, every time.</p>
+
+      <div class="process-steps">
+        <div class="process-connector" aria-hidden="true">
+          <div class="pc-fill" id="processLineFill"></div>
+        </div>
+
+        <div class="process-step reveal" style="--delay:0s">
+          <div class="ps-icon-wrap">
+            <div class="ps-icon"><i class="fa-solid fa-comments"></i></div>
+            <div class="ps-ring"></div>
+          </div>
+          <div class="ps-num">01</div>
+          <h3>Discovery</h3>
+          <p>Deep-dive workshops to understand goals, constraints, and success metrics before a single line is written.</p>
+        </div>
+        <div class="process-step reveal" style="--delay:0.1s">
+          <div class="ps-icon-wrap">
+            <div class="ps-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <div class="ps-ring"></div>
+          </div>
+          <div class="ps-num">02</div>
+          <h3>Design</h3>
+          <p>Wireframes, prototypes, and design systems crafted for clarity, beauty, and conversion rates.</p>
+        </div>
+        <div class="process-step reveal" style="--delay:0.2s">
+          <div class="ps-icon-wrap">
+            <div class="ps-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="ps-ring"></div>
+          </div>
+          <div class="ps-num">03</div>
+          <h3>Build</h3>
+          <p>Iterative sprints, clean architecture, and comprehensive testing — code you can actually maintain.</p>
+        </div>
+        <div class="process-step reveal" style="--delay:0.3s">
+          <div class="ps-icon-wrap">
+            <div class="ps-icon"><i class="fa-solid fa-rocket"></i></div>
+            <div class="ps-ring"></div>
+          </div>
+          <div class="ps-num">04</div>
+          <h3>Launch</h3>
+          <p>CI/CD deployment, monitoring setup, and a warm handoff with documentation your team will love.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════ PROJECTS ══ -->
+  <section class="projects section" id="projects">
+    <!-- Subtle radial glow background -->
+    <div class="proj-bg-glow" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="section-tag reveal">
+        <span class="tag-icon"><i class="fa-solid fa-briefcase"></i></span>
+        Portfolio
+      </div>
+      <h2 class="section-title centered reveal">Our Work</h2>
+      <p class="section-sub reveal">
+        Real products, real impact. A showcase of the digital systems,
+        platforms, and tools we've engineered from concept to launch.
+      </p>
+
+      <!-- Filter tabs -->
+      <div class="proj-filters reveal">
+        <button class="pf-btn active" data-filter="all">All Projects</button>
+        <button class="pf-btn" data-filter="ai">AI</button>
+        <button class="pf-btn" data-filter="web">Web</button>
+        <button class="pf-btn" data-filter="platform">Platform</button>
+        <button class="pf-btn" data-filter="automation">Automation</button>
+      </div>
+
+      <!-- Project cards grid -->
+      <div class="proj-grid" id="projGrid">
+
+        <!-- 01 MindSync -->
+        <div class="proj-card gsap-proj-card" data-cat="ai">
+          <div class="proj-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=75&fit=crop"
+              alt="MindSync AI mental health app"
+              loading="lazy"
+            />
+            <div class="proj-img-overlay">
+              <div class="poi-content">
+                <a href="#contact" class="poi-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  View Project
+                </a>
+                <a href="#contact" class="poi-btn poi-btn--ghost">
+                  <i class="fa-solid fa-envelope"></i>
+                  Inquire
+                </a>
+              </div>
+            </div>
+            <div class="proj-cat-badge">AI</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-header">
+              <h3 class="proj-title">MindSync</h3>
+              <span class="proj-year">2025</span>
+            </div>
+            <p class="proj-desc">
+              AI-powered mental health monitoring app that analyzes user behavior
+              and digital activity patterns to detect early signs of depression and stress.
+            </p>
+            <div class="proj-tags">
+              <span>AI</span>
+              <span>Mobile Sensors</span>
+              <span>Python</span>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-metric">
+                <span class="pm-val">Early Detection</span>
+                <span class="pm-label">Mental Health AI</span>
+              </div>
+              <a href="#contact" class="proj-cta">
+                Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="proj-card-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- 02 SaleJustHere -->
+        <div class="proj-card gsap-proj-card" data-cat="web">
+          <div class="proj-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=75&fit=crop"
+              alt="SaleJustHere classified platform"
+              loading="lazy"
+            />
+            <div class="proj-img-overlay">
+              <div class="poi-content">
+                <a href="#contact" class="poi-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  View Project
+                </a>
+                <a href="#contact" class="poi-btn poi-btn--ghost">
+                  <i class="fa-solid fa-envelope"></i>
+                  Inquire
+                </a>
+              </div>
+            </div>
+            <div class="proj-cat-badge">Web</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-header">
+              <h3 class="proj-title">SaleJustHere</h3>
+              <span class="proj-year">2019</span>
+            </div>
+            <p class="proj-desc">
+              Free classified platform where users can buy, sell, and promote
+              products and services easily with a smooth, modern experience.
+            </p>
+            <div class="proj-tags">
+              <span>Web Development</span>
+              <span>Database Systems</span>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-metric">
+                <span class="pm-val">Free Platform</span>
+                <span class="pm-label">Buy &amp; Sell Marketplace</span>
+              </div>
+              <a href="#contact" class="proj-cta">
+                Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="proj-card-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- 03 BlueLabour -->
+        <div class="proj-card gsap-proj-card" data-cat="platform">
+          <div class="proj-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=75&fit=crop"
+              alt="BlueLabour worker connection platform"
+              loading="lazy"
+            />
+            <div class="proj-img-overlay">
+              <div class="poi-content">
+                <a href="#contact" class="poi-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  View Project
+                </a>
+                <a href="#contact" class="poi-btn poi-btn--ghost">
+                  <i class="fa-solid fa-envelope"></i>
+                  Inquire
+                </a>
+              </div>
+            </div>
+            <div class="proj-cat-badge">Platform</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-header">
+              <h3 class="proj-title">BlueLabour</h3>
+              <span class="proj-year">2025</span>
+            </div>
+            <p class="proj-desc">
+              Platform connecting blue-collar workers — electricians, plumbers,
+              drivers — with people who need their services, fast and reliably.
+            </p>
+            <div class="proj-tags">
+              <span>Web Platform</span>
+              <span>Job Marketplace</span>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-metric">
+                <span class="pm-val">Worker Network</span>
+                <span class="pm-label">Service Marketplace</span>
+              </div>
+              <a href="#contact" class="proj-cta">
+                Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="proj-card-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- 04 Earthinfo Digital Card -->
+        <div class="proj-card gsap-proj-card" data-cat="web">
+          <div class="proj-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=75&fit=crop"
+              alt="Earthinfo Digital Card PWA"
+              loading="lazy"
+            />
+            <div class="proj-img-overlay">
+              <div class="poi-content">
+                <a href="#contact" class="poi-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  View Project
+                </a>
+                <a href="#contact" class="poi-btn poi-btn--ghost">
+                  <i class="fa-solid fa-envelope"></i>
+                  Inquire
+                </a>
+              </div>
+            </div>
+            <div class="proj-cat-badge">PWA</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-header">
+              <h3 class="proj-title">Earthinfo Digital Card</h3>
+              <span class="proj-year">2024</span>
+            </div>
+            <p class="proj-desc">
+              Smart digital visiting card system that lets professionals share
+              contact information instantly through a sleek modern web interface.
+            </p>
+            <div class="proj-tags">
+              <span>Web App</span>
+              <span>PWA</span>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-metric">
+                <span class="pm-val">Instant Share</span>
+                <span class="pm-label">Digital Identity</span>
+              </div>
+              <a href="#contact" class="proj-cta">
+                Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="proj-card-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- 05 AI Website Bug Finder -->
+        <div class="proj-card gsap-proj-card" data-cat="ai">
+          <div class="proj-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=75&fit=crop"
+              alt="AI Website Bug Finder tool"
+              loading="lazy"
+            />
+            <div class="proj-img-overlay">
+              <div class="poi-content">
+                <a href="#contact" class="poi-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  View Project
+                </a>
+                <a href="#contact" class="poi-btn poi-btn--ghost">
+                  <i class="fa-solid fa-envelope"></i>
+                  Inquire
+                </a>
+              </div>
+            </div>
+            <div class="proj-cat-badge">AI</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-header">
+              <h3 class="proj-title">AI Website Bug Finder</h3>
+              <span class="proj-year">2026</span>
+            </div>
+            <p class="proj-desc">
+              AI-powered tool that scans websites and automatically detects bugs,
+              SEO issues, and performance bottlenecks in seconds.
+            </p>
+            <div class="proj-tags">
+              <span>AI</span>
+              <span>Web Automation</span>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-metric">
+                <span class="pm-val">Auto Scan</span>
+                <span class="pm-label">Bug &amp; SEO Detection</span>
+              </div>
+              <a href="#contact" class="proj-cta">
+                Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="proj-card-glow" aria-hidden="true"></div>
+        </div>
+
+        <!-- 06 Smart Automation Tools -->
+        <div class="proj-card gsap-proj-card" data-cat="automation">
+          <div class="proj-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=75&fit=crop"
+              alt="Smart Automation Tools"
+              loading="lazy"
+            />
+            <div class="proj-img-overlay">
+              <div class="poi-content">
+                <a href="#contact" class="poi-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  View Project
+                </a>
+                <a href="#contact" class="poi-btn poi-btn--ghost">
+                  <i class="fa-solid fa-envelope"></i>
+                  Inquire
+                </a>
+              </div>
+            </div>
+            <div class="proj-cat-badge">Automation</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-header">
+              <h3 class="proj-title">Smart Automation Tools</h3>
+              <span class="proj-year">2026</span>
+            </div>
+            <p class="proj-desc">
+              A suite of automation tools that improve productivity and streamline
+              business workflows with smart integrations and API-driven pipelines.
+            </p>
+            <div class="proj-tags">
+              <span>Automation Systems</span>
+              <span>APIs</span>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-metric">
+                <span class="pm-val">Workflow Engine</span>
+                <span class="pm-label">Business Automation</span>
+              </div>
+              <a href="#contact" class="proj-cta">
+                Details <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="proj-card-glow" aria-hidden="true"></div>
+        </div>
+
+      </div><!-- /proj-grid -->
+
+      <!-- View all CTA -->
+      <div class="proj-cta-row reveal">
+        <a href="#contact" class="btn-primary btn-glow">
+          <span class="btn-shimmer"></span>
+          Start Your Project
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <p class="proj-cta-note">Have an idea? We'd love to build it with you.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ TECH ══ -->
+  <section class="tech section" id="tech">
+    <div class="container">
+      <div class="section-tag reveal">
+        <span class="tag-icon"><i class="fa-solid fa-microchip"></i></span>
+        Our Arsenal
+      </div>
+      <h2 class="section-title centered reveal">Technologies We Master</h2>
+      <p class="section-sub reveal">We choose the right tool for every job — battle-tested stacks paired with cutting-edge frameworks.</p>
+
+      <div class="tech-domains">
+        <div class="tech-domain reveal" style="--delay:0s">
+          <div class="td-header">
+            <div class="td-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>AI / Machine Learning</h3>
+          </div>
+          <div class="tech-badges">
+            <span class="badge">Python</span>
+            <span class="badge">TensorFlow</span>
+            <span class="badge">PyTorch</span>
+            <span class="badge">LangChain</span>
+            <span class="badge">OpenAI API</span>
+            <span class="badge">Scikit-learn</span>
+          </div>
+        </div>
+        <div class="tech-domain reveal" style="--delay:0.1s">
+          <div class="td-header">
+            <div class="td-icon"><i class="fa-solid fa-cloud"></i></div>
+            <h3>Cloud Computing</h3>
+          </div>
+          <div class="tech-badges">
+            <span class="badge">AWS</span>
+            <span class="badge">GCP</span>
+            <span class="badge">Azure</span>
+            <span class="badge">Terraform</span>
+            <span class="badge">Kubernetes</span>
+            <span class="badge">Docker</span>
+          </div>
+        </div>
+        <div class="tech-domain reveal" style="--delay:0.2s">
+          <div class="td-header">
+            <div class="td-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Web Development</h3>
+          </div>
+          <div class="tech-badges">
+            <span class="badge">React</span>
+            <span class="badge">Next.js</span>
+            <span class="badge">Node.js</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">GraphQL</span>
+            <span class="badge">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="tech-domain reveal" style="--delay:0.3s">
+          <div class="td-header">
+            <div class="td-icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>DevOps</h3>
+          </div>
+          <div class="tech-badges">
+            <span class="badge">GitHub Actions</span>
+            <span class="badge">Jenkins</span>
+            <span class="badge">Prometheus</span>
+            <span class="badge">Grafana</span>
+            <span class="badge">Ansible</span>
+            <span class="badge">Nginx</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dual marquee -->
+      <div class="marquee-wrap reveal">
+        <div class="tech-marquee">
+          <div class="marquee-track">
+            <span>React</span><span class="sep">·</span><span>Python</span><span class="sep">·</span>
+            <span>AWS</span><span class="sep">·</span><span>Kubernetes</span><span class="sep">·</span>
+            <span>TensorFlow</span><span class="sep">·</span><span>Next.js</span><span class="sep">·</span>
+            <span>Terraform</span><span class="sep">·</span><span>Docker</span><span class="sep">·</span>
+            <span>LangChain</span><span class="sep">·</span><span>Flutter</span><span class="sep">·</span>
+            <span>GraphQL</span><span class="sep">·</span><span>PostgreSQL</span><span class="sep">·</span>
+            <span>React</span><span class="sep">·</span><span>Python</span><span class="sep">·</span>
+            <span>AWS</span><span class="sep">·</span><span>Kubernetes</span><span class="sep">·</span>
+            <span>TensorFlow</span><span class="sep">·</span><span>Next.js</span><span class="sep">·</span>
+          </div>
+        </div>
+        <div class="tech-marquee marquee-reverse">
+          <div class="marquee-track">
+            <span>GitHub Actions</span><span class="sep">·</span><span>Jenkins</span><span class="sep">·</span>
+            <span>Prometheus</span><span class="sep">·</span><span>Grafana</span><span class="sep">·</span>
+            <span>Ansible</span><span class="sep">·</span><span>Nginx</span><span class="sep">·</span>
+            <span>PyTorch</span><span class="sep">·</span><span>OpenAI API</span><span class="sep">·</span>
+            <span>Kotlin</span><span class="sep">·</span><span>TypeScript</span><span class="sep">·</span>
+            <span>Redis</span><span class="sep">·</span><span>MongoDB</span><span class="sep">·</span>
+            <span>GitHub Actions</span><span class="sep">·</span><span>Jenkins</span><span class="sep">·</span>
+            <span>Prometheus</span><span class="sep">·</span><span>Grafana</span><span class="sep">·</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ TESTIMONIALS ══ -->
+  <section class="testimonials section" id="testimonials">
+    <div class="testi-bg-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-tag reveal">
+        <span class="tag-icon"><i class="fa-solid fa-quote-left"></i></span>
+        Client Voices
+      </div>
+      <h2 class="section-title centered reveal">Trusted by Builders</h2>
+      <p class="section-sub reveal">Don't take our word for it — hear directly from our clients.</p>
+
+      <div class="testi-grid">
+        <div class="testi-card reveal" style="--delay:0s">
+          <div class="tc-glow"></div>
+          <div class="tc-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p>"Earthinfo System delivered our ML platform three weeks ahead of schedule. Code quality was exceptional and the team was communicative every step of the way."</p>
+          <div class="tc-footer">
+            <div class="tc-avatar">AK</div>
+            <div class="tc-info">
+              <strong>Arjun Kapoor</strong>
+              <span>CTO, FinVerse Labs</span>
+            </div>
+            <div class="tc-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal" style="--delay:0.12s">
+          <div class="tc-glow"></div>
+          <div class="tc-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p>"We went from idea to live Android app in 8 weeks. The UX was so polished our users thought we'd been building it for years. Absolutely phenomenal."</p>
+          <div class="tc-footer">
+            <div class="tc-avatar">SM</div>
+            <div class="tc-info">
+              <strong>Sarah Mitchell</strong>
+              <span>Founder, HealthSync</span>
+            </div>
+            <div class="tc-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal" style="--delay:0.24s">
+          <div class="tc-glow"></div>
+          <div class="tc-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p>"Our AWS bills dropped 40% after Earthinfo rebuilt our infrastructure. The ROI on this engagement paid for itself in under 90 days. Remarkable team."</p>
+          <div class="tc-footer">
+            <div class="tc-avatar">RP</div>
+            <div class="tc-info">
+              <strong>Ravi Patel</strong>
+              <span>VP Engineering, LogiRoute</span>
+            </div>
+            <div class="tc-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ FOUNDER ══ -->
+  <section class="founder section" id="founder">
+    <!-- Decorative grid -->
+    <div class="founder-grid-bg" aria-hidden="true"></div>
+    <!-- Gold radial glow behind the image -->
+    <div class="founder-glow-blob" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="section-tag reveal">
+        <span class="tag-icon"><i class="fa-solid fa-user-tie"></i></span>
+        Leadership
+      </div>
+
+      <div class="founder-grid">
+
+        <!-- LEFT — Image -->
+        <div class="founder-image-col reveal-left">
+          <div class="founder-img-wrapper">
+            <!-- Rotating border ring -->
+            <div class="founder-img-ring founder-img-ring--outer" aria-hidden="true"></div>
+            <div class="founder-img-ring founder-img-ring--inner" aria-hidden="true"></div>
+            <!-- Corner ornaments -->
+            <div class="founder-corner founder-corner--tl" aria-hidden="true"></div>
+            <div class="founder-corner founder-corner--br" aria-hidden="true"></div>
+            <!-- The image itself -->
+            <div class="founder-img-frame">
+              <img
+                src="images/hardik.jpg"
+                alt="Hardik Kumawat — Founder &amp; CEO of Earthinfo System"
+                loading="lazy"
+                width="600"
+                height="600"
+              />
+              <!-- Gold overlay gradient -->
+              <div class="founder-img-overlay" aria-hidden="true"></div>
+            </div>
+            <!-- Floating badge -->
+            <div class="founder-badge" aria-hidden="true">
+              <span class="fb-dot"></span>
+              <span>Founder &amp; CEO</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT — Bio -->
+        <div class="founder-bio-col reveal-right">
+          <div class="founder-eyebrow">
+            <span class="fey-line"></span>
+            Meet the Founder
+          </div>
+
+          <h2 class="founder-name">Hardik<br/><span class="founder-name-accent">Kumawat</span></h2>
+
+          <div class="founder-title-pill">
+            <i class="fa-solid fa-crown"></i>
+            Founder &amp; CEO — Earthinfo System
+          </div>
+
+          <p class="founder-desc">
+            Hardik Kumawat is the founder and CEO of Earthinfo System, a technology-focused company dedicated to building innovative software solutions, modern web applications, and intelligent digital systems. His vision is to create powerful technology that solves real-world problems and helps businesses grow.
+          </p>
+
+          <!-- Highlight stats -->
+          <div class="founder-highlights">
+            <div class="fh-item">
+              <span class="fh-val">6+</span>
+              <span class="fh-label">Years of Experience</span>
+            </div>
+            <div class="fh-sep"></div>
+            <div class="fh-item">
+              <span class="fh-val">80+</span>
+              <span class="fh-label">Projects Led</span>
+            </div>
+            <div class="fh-sep"></div>
+            <div class="fh-item">
+              <span class="fh-val">50+</span>
+              <span class="fh-label">Clients Served</span>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="founder-social">
+            <a href="https://www.linkedin.com/in/hardik-kumawat-01a52b326/" target="_blank" rel="noopener" class="founder-social-btn" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/Hardik-android15" target="_blank" rel="noopener" class="founder-social-btn" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://hardik-android15.github.io/Hardik-s-digital-card/" class="founder-social-btn" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ CONTACT ══ -->
+<!-- ══════════════════════════ CONTACT ══ -->
+<section class="contact section" id="contact">
+  <div class="container">
+    <div class="section-tag reveal">
+      <span class="tag-icon"><i class="fa-solid fa-paper-plane"></i></span>
+      Get In Touch
+    </div>
+    <h2 class="section-title centered reveal">Let's Build Something Great</h2>
+    <p class="section-sub reveal">Ready to start your project? Drop a message and we'll respond within 24 hours.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <div class="contact-item">
+          <div class="ci-icon-wrap">
+            <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+          </div>
+          <div class="ci-text">
+            <h4>Email Us</h4>
+            <a href="#">hardikkumawat773@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ci-icon-wrap">
+            <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+          </div>
+          <div class="ci-text">
+            <h4>Call Us</h4>
+            <a href="tel:+919461388565">+91 94613 88565</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ci-icon-wrap">
+            <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+          </div>
+          <div class="ci-text">
+            <h4>Location</h4>
+            <span>Jaipur</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ UPDATED FORM -->
+      <form class="contact-form reveal-right" id="contactForm" onsubmit="sendMail(event)" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <div class="input-wrap">
+              <input type="text" id="name" placeholder="John" required />
+              <div class="input-bar"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Last Name</label>
+            <div class="input-wrap">
+              <input type="text" id="lname" placeholder="Doe" required />
+              <div class="input-bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <div class="input-wrap">
+            <input type="email" id="email" placeholder="john@example.com" required />
+            <div class="input-bar"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Service Interested In</label>
+          <div class="input-wrap select-wrap">
+            <select id="service">
+              <option value="" disabled selected>Select a service…</option>
+              <option>Web Development</option>
+              <option>Software Development</option>
+              <option>AI Solutions</option>
+              <option>Android App Development</option>
+              <option>Cloud Solutions</option>
+              <option>Other / Not Sure</option>
+            </select>
+            <div class="input-bar"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Your Message</label>
+          <div class="input-wrap">
+            <textarea id="message" rows="5" placeholder="Tell us about your project…" required></textarea>
+            <div class="input-bar"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary btn-glow btn-full" id="submitBtn">
+          <span class="btn-text-content">
+            Send Message <i class="fa-solid fa-paper-plane"></i>
+          </span>
+          <span class="btn-loading" style="display:none">
+            <i class="fa-solid fa-circle-notch fa-spin"></i> Sending…
+          </span>
+        </button>
+
+        <div class="form-success" id="formSuccess" style="display:none">
+          <i class="fa-solid fa-circle-check"></i>
+          Message sent! We'll be in touch very soon.
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+  <!-- ════════════════════════════ FOOTER ══ -->
+  <footer class="footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="container">
+
+      <!-- CTA Banner -->
+      <div class="footer-cta reveal">
+        <div class="fcta-text">
+          <h3>Ready to start your project?</h3>
+          <p>Let's turn your vision into reality.</p>
+        </div>
+        <a href="#contact" class="btn-primary btn-glow">
+          <span class="btn-shimmer"></span>
+          Start a Project <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <span class="logo-mark sm">ES</span>
+            Earthinfo<span class="logo-accent">System</span>
+          </a>
+          <p>Building the future with technology — one precise line of code at a time.</p>
+          <div class="social-row">
+            <a href="https://hardik-android15.github.io/Hardik-s-digital-card/" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/hardik-kumawat-01a52b326/" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/Hardik-android15" class="social-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/h_4_hardik1/" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="#services">Web Development</a></li>
+              <li><a href="#services">Software Dev</a></li>
+              <li><a href="#services">AI Solutions</a></li>
+              <li><a href="#services">Android Apps</a></li>
+              <li><a href="#services">Cloud Solutions</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#projects">Portfolio</a></li>
+              <li><a href="#tech">Technologies</a></li>
+              <li><a href="#process">Our Process</a></li>
+              <li><a href="#contact">Careers</a></li>
+            </ul>
+          </div>
+ <div class="footer-col">
+  <h5>Contact</h5>
+  <ul>
+    <li>
+      <a href="https://mail.google.com/mail/u/0/?fs=1&to=hardikkumawat773@gmail.com&tf=cm">
+        hardikkumawat773@gmail.com
+      </a>
+    </li>
+    <li>
+      <a href="tel:+919461388565">
+        +91 94613 88565
+      </a>
+    </li>
+    <li><a href="#contact">Get a Quote</a></li>
+  </ul>
+</div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Earthinfo System. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+    <div class="bt-ring"></div>
+  </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("PDbv5K-G2Ru43YJtG");
+})();
+
+function sendMail(event) {
+  event.preventDefault();
+
+  const btn = document.getElementById("submitBtn");
+  const loading = btn.querySelector(".btn-loading");
+  const text = btn.querySelector(".btn-text-content");
+
+  text.style.display = "none";
+  loading.style.display = "inline-block";
+
+  emailjs.send("service_ol46vwc", "template_gxug135", {
+    name: document.getElementById("name").value,
+    lname: document.getElementById("lname").value,
+    email: document.getElementById("email").value,
+    service: document.getElementById("service").value,
+    message: document.getElementById("message").value
+  })
+  .then(() => {
+    document.getElementById("formSuccess").style.display = "block";
+    document.getElementById("contactForm").reset();
+  })
+  .catch((err) => {
+    alert("Failed ❌");
+    console.log(err);
+  })
+  .finally(() => {
+    loading.style.display = "none";
+    text.style.display = "inline-block";
+  });
+}
+</script>
+</body>
+</html>
